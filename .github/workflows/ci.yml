@@ -1,0 +1,20 @@
+name: CI Workflow
+
+on:
+    push:
+        paths:
+            - 'data.txt'
+
+jobs:
+    build-and-run:
+        runs-on: ubuntu-latest
+
+        steps:
+          - name: Checkout repository
+            uses: actions/checkout@v2
+
+          - name: Build Docker image
+            run: docker build -t frequency-docker .
+
+          - name: Run Docker container
+            run: docker run frequency-docker
