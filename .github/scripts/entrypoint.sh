@@ -1,9 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 
-# Grant execution rights to both scripts
-chmod +x /app/.github/scripts/update_readme.sh
-chmod +x /app/.github/scripts/update_index.sh
+# Execute frequency.py with data.txt as an argument and capture its output
+output=$(python3 /app/.github/apps/frequency.py /app/data.txt)
 
-# Execute the scripts
-/app/.github/scripts/update_readme.sh
-/app/.github/scripts/update_index.sh
+# Pass the output to update_readme.sh and update_index.sh
+/app/.github/scripts/update_readme.sh "$output"
+/app/.github/scripts/update_index.sh "$output"

@@ -1,3 +1,4 @@
 GitHub Copilot is an AI-powered code completion tool that helps developers write code faster and with fewer errors. It provides intelligent suggestions based on the context of the code being written, allowing developers to focus on solving problems rather than writing boilerplate code. Copilot supports multiple programming languages and integrates seamlessly with popular code editors. By leveraging machine learning, it continuously improves its suggestions, making it an invaluable tool for both novice and experienced developers.
 Github Copilot is ideal for code assistance and suggestions
 GitHub chat auto-assist and update code
+github chats can update multiple files 
