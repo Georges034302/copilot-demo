@@ -5,9 +5,6 @@ output=$1
 timestamp=$(date)
 output="Data.txt Frequency Analysis: $timestamp<br>${output//$'\n'/<br>}"
 
-# Debugging information
-echo "Updating index.html with output: $output"
-
 # Append the output after the closing ul-tag in index.html using a here document
 sed -i '/<\/ul>/r /dev/stdin' /app/index.html << EOM
 <pre>$output</pre>

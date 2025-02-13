@@ -4,7 +4,8 @@
 output=$1
 
 # Append the output to README.md
-echo -e "\n<pre>$output</pre>" >> /app/README.md
+timestamp=$(date)
+echo -e "\nData.txt Frequency Analysis: $timestamp\n<pre>$output</pre>" >> /app/README.md
 
 # Commit the changes - specify the github actor and email
 git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
